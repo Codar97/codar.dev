@@ -1,0 +1,27 @@
+.nav-bar {
+  display: flex;
+  //background-color: #252525;
+  box-shadow: 0 4px 6px -7px #252525;
+  padding: 25px 50px;
+  & * {
+  }
+  &__title {
+    flex: 1 0 auto;
+    &__text {
+      color: #98b85f;
+    }
+  }
+  &__links {
+    &__link {
+      color: inherit;
+      margin-left: 15px;
+      text-decoration: none;
+      &:hover {
+        font-weight: bold;
+      }
+      &--active {
+        color: #5eafee;
+      }
+    }
+  }
+}
