@@ -5,9 +5,9 @@ function NavBar() {
   return (
     <div className="nav-bar">
       <div className="nav-bar__title">
-        <a className="nav-bar__title__text">
+        <NavLink to="/" className="nav-bar__title__text">
           codar@sam-clark
-        </a>
+        </NavLink>
         :
       </div>
       <div className="nav-bar__links">
