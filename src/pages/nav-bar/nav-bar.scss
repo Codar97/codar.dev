@@ -12,6 +12,24 @@
       color: #98b85f;
     }
   }
+  &__dropdown {
+    display: inline-block;
+    &__button {
+    }
+    &__content {
+      background: #1e2128;
+      max-height: 0;
+      transition: max-height 500ms;
+      overflow: hidden;
+      display: flex;
+      position: absolute;
+      margin-top: 5px;
+      flex-direction: column;
+      &--open {
+        max-height: 100vh;
+      }
+    }
+  }
   &__links {
     &__link {
       color: inherit;

@@ -18,6 +18,8 @@ body {
 }
 
 .content {
+  align-self: center;
   padding: 25px 50px;
+  max-width: 750px;
   flex-grow: 1;
 }
