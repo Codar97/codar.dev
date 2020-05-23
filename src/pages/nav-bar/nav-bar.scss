@@ -1,10 +1,7 @@
 .nav-bar {
   display: flex;
-  //background-color: #252525;
   box-shadow: 0 4px 6px -7px #252525;
   padding: 25px 50px;
-  & * {
-  }
   &__title {
     flex: 1 0 auto;
     &__text {
@@ -15,6 +12,27 @@
   &__dropdown {
     display: inline-block;
     &__button {
+      cursor: pointer;
+      &:hover, &:focus {
+        font-weight: bold;
+      }
+    }
+    &__icon {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        border-bottom: 1px #9ba2b2 solid;
+      }
+      &::before {
+        content: "";
+        left: 2.5px;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        border-left: 1px #9ba2b2 solid;
+      }
     }
     &__content {
       background: #1e2128;
@@ -23,8 +41,12 @@
       overflow: hidden;
       display: flex;
       position: absolute;
-      margin-top: 5px;
       flex-direction: column;
+      & .nav-bar__links__link {
+        border-bottom: 1px solid lighten(#1e2128, 10);
+        margin: 0;
+        padding: 2px 15px;
+      }
       &--open {
         max-height: 100vh;
       }
@@ -35,7 +57,7 @@
       color: inherit;
       margin-left: 15px;
       text-decoration: none;
-      &:hover {
+      &:hover, &:focus {
         font-weight: bold;
       }
       &--active {

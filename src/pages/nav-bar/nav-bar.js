@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useCallback} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {NavLink} from 'react-router-dom';
 
 const links = {
@@ -50,8 +50,10 @@ function ResponsiveMenu() {
   },[drowpdownOpen]);
 
   return (<div className="nav-bar__dropdown">
-    <span onClick={toggleDropdown}
-          className="nav-bar__links__link--active nav-bar__links__link nav-bar__dropdown__button">{links[window.location.pathname]}</span>
+    <div onClick={toggleDropdown} className="nav-bar__dropdown__button" tabIndex={0}>
+      <span className="nav-bar__links__link--active nav-bar__links__link">{links[window.location.pathname]}</span>
+      <span className="nav-bar__dropdown__icon"/>
+    </div>
     <div className={`nav-bar__dropdown__content${drowpdownOpen ? " nav-bar__dropdown__content--open" : ""}`}>
       {Object.keys(links).filter((to) => to !== window.location.pathname).map((to) => <Link onClick={toggleDropdown}
                                                                                             to={to}>{links[to]}</Link>)}
