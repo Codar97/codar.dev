@@ -50,9 +50,9 @@ function ResponsiveMenu() {
   },[drowpdownOpen]);
 
   return (<div className="nav-bar__dropdown">
-    <div onClick={toggleDropdown} className="nav-bar__dropdown__button" tabIndex={0}>
+    <div onClick={toggleDropdown} className="nav-bar__dropdown__button">
       <span className="nav-bar__links__link--active nav-bar__links__link">{links[window.location.pathname]}</span>
-      <span className="nav-bar__dropdown__icon"/>
+      <span className={`nav-bar__dropdown__icon${drowpdownOpen ? " nav-bar__dropdown__icon--open" : ""}`}/>
     </div>
     <div className={`nav-bar__dropdown__content${drowpdownOpen ? " nav-bar__dropdown__content--open" : ""}`}>
       {Object.keys(links).filter((to) => to !== window.location.pathname).map((to) => <Link onClick={toggleDropdown}

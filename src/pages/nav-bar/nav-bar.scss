@@ -19,19 +19,29 @@
     }
     &__icon {
       position: relative;
-      &::after {
+      margin-left: 5px;
+      &::before, &::after {
+        transition: transform 500ms;
         content: "";
         position: absolute;
-        width: 5px;
-        border-bottom: 1px #9ba2b2 solid;
+        background: #9ba2b2;
+      }
+      &--open {
+        &::before, &::after {
+          transform: rotate(90deg);
+        }
+      }
+      &::after {
+        height: 1px;
+        left: -1px;
+        bottom: 9px;
+        width: 11px;
       }
       &::before {
-        content: "";
-        left: 2.5px;
-        width: 5px;
-        height: 5px;
-        position: absolute;
-        border-left: 1px #9ba2b2 solid;
+        left: 4px;
+        bottom: 4px;
+        width: 1px;
+        height: 11px;
       }
     }
     &__content {
