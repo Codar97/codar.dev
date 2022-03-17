@@ -5,9 +5,11 @@
   h1 {
     font-size: 20px;
   }
+
   section {
     margin-bottom: 50px;
   }
+
   br {
     border-bottom: 1px solid #9ba2b2;
     content: "";
@@ -116,9 +118,11 @@
   //display: flex;
   overflow: hidden;
   position: relative;
+
   &__subtext {
     font-size: 12px;
   }
+
   #chartdiv {
     width: 50%;
     height: 300px;
@@ -144,7 +148,7 @@
     }
 
     &__content {
-     line-height: 200%;
+      line-height: 200%;
     }
 
     &__title {
