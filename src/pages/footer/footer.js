@@ -1,10 +1,11 @@
 import React from 'react';
+import icon from './assets/GitHub-Mark-32px.png';
 
 function Footer() {
-  return (
-    <footer className='footer'>
-     made by codar (me)
-    </footer>)
+    return (
+        <footer className='footer'>
+            made by codar (me) <a href={"https://github.com/Codar97"}><img src={icon}/></a>
+        </footer>)
 }
 
 export default Footer;

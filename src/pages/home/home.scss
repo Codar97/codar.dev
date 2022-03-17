@@ -1,3 +1,155 @@
 .home {
   margin: auto;
+  text-align: justify;
+
+  h1 {
+    font-size: 20px;
+  }
+  section {
+    margin-bottom: 50px;
+  }
+  br {
+    border-bottom: 1px solid #9ba2b2;
+    content: "";
+    display: block;
+    margin: 15px 0;
+  }
+
+  p {
+    br {
+      border: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  ul > li {
+    text-indent: -20px;
+    text-align: left;
+  }
+
+  ul > li:before {
+    color: #5eafee;
+    content: "- ";
+    text-indent: -5px;
+  }
+}
+
+.experience {
+  display: flex;
+  height: 100%;
+
+  &__card {
+    flex: 1 1 auto;
+    font-size: 14px;
+
+    * {
+      margin-bottom: 5px;
+    }
+
+    &__role {
+      font-weight: bold;
+      font-size: 16px;
+      border-bottom: 1px solid rgba(#5eafee, 0.2);
+    }
+
+    &__tools {
+
+    }
+
+    &__sub-title {
+      font-style: italic;
+    }
+
+    &__description {
+    }
+  }
+
+  &__border {
+    height: 100%;
+    border-radius: 1px;
+    margin: 0 10px 0 -2px;
+    position: relative;
+
+    span {
+      transition: top 100ms ease;
+      content: "";
+      border: 1px solid #98b85f;
+      height: 80px;
+      border-radius: 1px;
+      position: absolute;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      border-right: 2px solid rgba(#5eafee, 0.2);
+      border-radius: 1px;
+      padding-right: 10px;
+
+      &:hover {
+        cursor: pointer;
+        border-color: rgba(#5eafee, 0.4)
+      }
+
+      &--selected {
+        color: #5eafee;
+      }
+    }
+  }
+}
+
+.technical-skills {
+  //display: flex;
+  overflow: hidden;
+  position: relative;
+  &__subtext {
+    font-size: 12px;
+  }
+  #chartdiv {
+    width: 50%;
+    height: 300px;
+    flex: 1 1 auto;
+    transform: translateX(50%);
+    transition: transform 100ms ease;
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+
+  &__side-panel {
+    width: 50%;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transition: transform 100ms ease;
+
+    &--open {
+      transform: translateX(0);
+    }
+
+    &__content {
+     line-height: 200%;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
 }

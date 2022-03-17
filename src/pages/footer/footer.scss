@@ -1,6 +1,12 @@
 .footer {
   padding: 25px 50px;
   text-align: center;
+  display: flex;
+  justify-content: center;
   //position: absolute;
   //bottom: 0px;
+  img {
+    width: 20px;
+    filter: invert(70%) sepia(9%) saturate(420%) hue-rotate(184deg) brightness(91%) contrast(90%);
+  }
 }

@@ -1,0 +1,75 @@
+.projects {
+  margin: auto;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__card {
+    width: 100%;
+    border: 1px solid #151525;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+
+    &:hover {
+    cursor: pointer;
+      border-color: #565e71;
+    }
+
+    &__title {
+      //border-bottom: 1px solid #404040;
+      text-transform: capitalize;
+    }
+
+    &__description {
+      font-size: 14px;
+      flex: 1 1 auto;
+    }
+
+    &__body {
+      display: flex;
+
+      &__main {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__image {
+      margin-left: 5px;
+
+      img {
+        width: 200px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__languages {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__lang {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      &__title {
+        font-size: 12px;
+        margin-left: 5px;
+      }
+
+      &__dot {
+        height: 10px;
+        width: 10px;
+        margin-left: 5px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
+  }
+}
