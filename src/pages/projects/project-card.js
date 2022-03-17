@@ -4,7 +4,7 @@ import colors from './colors.json';
 function ProjectCard({title, description, url, image, languages, responsive}) {
     const processLanguages = (languages) => {
         return languages.map(lang => {
-            return (<div className="projects__card__languages__lang">
+            return (<div className="projects__card__languages__lang" key={lang}>
                 <span className="projects__card__languages__dot" style={{"background": colors[lang].color}}/>
                 <span className="projects__card__languages__title">
                     {lang}
@@ -26,7 +26,7 @@ function ProjectCard({title, description, url, image, languages, responsive}) {
             </div>
             {!responsive &&
                 <div className="projects__card__image">
-                    <img src={image}/>
+                    <img alt={title + 'image'} src={image}/>
                 </div>
             }
         </div>

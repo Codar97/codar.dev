@@ -162,7 +162,7 @@ function Chart({setSelected, setSideVisible, className}) {
             setSelected(ev.target._dataItem.dataContext.category)
             setSideVisible(ev.target.get("active"))
             series.slices.each(function (slice) {
-                if (slice != ev.target && slice.get("active")) {
+                if (slice !== ev.target && slice.get("active")) {
                     slice.set("active", false);
                 }
             })
@@ -202,6 +202,7 @@ function Chart({setSelected, setSideVisible, className}) {
         ]);
 
         series.appear(1000, 100);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return (<div className={className} id={'chartdiv'}/>)
 }
