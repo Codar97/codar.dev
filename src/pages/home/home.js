@@ -130,6 +130,7 @@ function Chart({setSelected, setSideVisible, className}) {
         pieSeries.dataFields.value = "value";
         pieSeries.dataFields.category = "category";
         chart.innerRadius = am4core.percent(50);
+        pieSeries.hiddenState.properties.endAngle = -90;
         pieSeries.slices.template.cursorOverStyle = [{
             "property": "cursor", "value": "pointer"
         }];
