@@ -148,7 +148,7 @@ function Chart({setSelected, setSideVisible, className}) {
             setSelected(ev.target.dataItem.properties.category)
             setSideVisible(ev.target.dataItem._slice.isActive)
             series.slices.each(function (item) {
-                if (item.isActive && item != ev.target) {
+                if (item.isActive && item !== ev.target) {
                     item.isActive = false;
                 }
             })
@@ -164,7 +164,7 @@ function Chart({setSelected, setSideVisible, className}) {
             {value: 6, category: "Erlang", color: colors["Erlang"].color},
             {value: 5, category: "PHP", color: colors["PHP"].color},
             {value: 5, category: "SQL", color: colors["SQL"].color}];
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (<div className={className} id={'chartdiv'}/>)
 }
