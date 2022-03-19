@@ -3,14 +3,13 @@ import ProjectCard from "./project-card";
 import Invaders from "./assets/invaders.png";
 import TJJF from "./assets/tjjf.png";
 import Research from "./assets/research.png";
-import ResearchPDF from "./assets/main.pdf";
 import Webpage from "./assets/webpage.png";
 import Freddo from "./assets/freddo.png";
 
 const projectsList = [
     {
         title: 'Vulnerabilities in Messaging Apps to Quantum Attacks',
-        url: ResearchPDF,
+        url: "/main.pdf",
         image: Research,
         languages: ['TeX'],
         description: 'As a part of my University course I took on a research project titled "Vulnerabilities in Messaging Apps to Quantum Attacks". In this I looked into various popular messaging apps and determined what types of quantum attacks they are be susceptible to. The research brought up some interesting vulnerabilities in the messaging apps even without the use of quantum attacks due to poor security. I plan on doing some further research and improvements on this.'

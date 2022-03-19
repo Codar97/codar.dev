@@ -34,6 +34,10 @@ function Layout() {
                     <Route path="/projects">
                         <Projects responsive={responsive}/>
                     </Route>
+                    <Route path="/research" component={() => {
+                        window.location.href = "/main.pdf";
+                        return null;
+                    }}/>
                     <Route path="/contact"/>
                     <Route component={NotFound}/>
                 </Switch>
